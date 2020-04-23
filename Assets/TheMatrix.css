@@ -1,0 +1,113 @@
+body{
+    background-image: url(Pictures/BackScreen1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+.Back img{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+    z-index: -1;
+}
+.Rabbit{
+    height: 40vw;
+    width: 40vw;
+    top: 10vh;
+    left: 30vw;
+    position: absolute;
+}
+.blk{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 5;
+}
+.Rabbit1{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition-duration: 0.5s;
+}
+.Rabbit2{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition-duration: 0.5s;
+}
+.Rabbit3{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+}
+.Rabbit3 img{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+.Rabbit1 img{
+    height: 100%;
+    width: 100%;
+    top: 5%;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 0.5s;
+    z-index: 2;
+}
+.Rabbit2 img{
+    height: 100%;
+    width: 100%;
+    top: -5%;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+.Rabbit3 img{
+    z-index: -2;
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    from{opacity: 0; height: 110%; width: 110%; left: -2vw; top: -2vw}
+    to{opacity: 1; height: 100%; width: 100%; left: 0; top: 0}
+}
+.blk:hover{
+    opacity: 1;
+}
+.blk:hover ~.Rabbit1 img{
+    opacity: 1;
+    top: 0;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in;
+}
+.blk:hover ~.Rabbit2 img{
+    opacity: 1;
+    top: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
